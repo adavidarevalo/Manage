@@ -1,42 +1,46 @@
-import * as React from "react"
-import PropTypes from "prop-types"
+import React, {useState} from "react"
 import { Link } from "gatsby"
+import logo from '../images/logo.svg'
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import '../styles/layout.scss'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+const Header = () => {
+  const [menuContainer, setMenuContainer] = useState(true)
+return(
+  <>
+  <header>
+    <div>
+      <Link>
+        <img src={logo} alt='Logo'/>
+      </Link>
+      <div 
+      className='MenuIcon'
+      onClick={()=> setMenuContainer(!menuContainer)}>
+        {menuContainer 
+          ?<AiOutlineMenu/>
+          :<AiOutlineClose/>}
+      </div>
+      <nav>
+        <Link>Product</Link>
+        <Link>Pricing</Link>
+        <Link>About Us</Link>
+        <Link>Careers</Link>
+        <Link>Community</Link>
+      </nav>
+      <Link className='ButtonElement'>Get Started</Link>
     </div>
   </header>
-)
+  <div className={menuContainer ? 'MenuPhone':'MenuPhone Open'}>
+    <div>
+    <Link>Product</Link>
+    <Link>Pricing</Link>
+    <Link>About Us</Link>
+    <Link>Careers</Link>
+    <Link>Community</Link>
+    </div>
+  </div>
+  </>
+)}
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

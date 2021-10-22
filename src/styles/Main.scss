@@ -1,0 +1,39 @@
+.MainContainer{
+    padding-top: 55px;
+    .PictureContainer{
+        background-image: url('../images/bg-simplify-section-mobile.svg');
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 80%;
+        }
+    }
+    .Container{
+        padding: 25px 10px;
+        text-align: center;
+        margin: 0 auto;
+        h2, h3{
+            font-size: 2rem;
+            line-height: 40px;
+            margin-top: 30px;
+        }
+        p{
+            color: hsl(227, 12%, 61%);
+            width: 80%;
+            margin: 0 auto 25px;
+        }
+        button{
+            background-color: hsl(12, 88%, 59%);
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: none;
+            box-shadow: 1px 5px 10px 0px rgb(236 155 155);
+            text-align: center;
+            padding-bottom: 13px;
+            font-weight: 500;
+        }
+    }
+}

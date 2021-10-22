@@ -1,0 +1,157 @@
+header{
+    position: fixed;
+    width: 100%;
+    background: white;
+    div{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        padding-block: 20px 8px;
+        justify-content: space-between;
+        a > img{
+            margin: 0px;
+        }
+        .MenuIcon{
+            padding: 0px;
+            width: 19px;
+            margin: 0px;
+            cursor: pointer;
+        }
+        nav{
+            display: none;
+        }
+        .ButtonElement{
+            display: none;
+        }
+    }
+}
+.MenuPhone{
+    position: fixed;
+    top: 59px;
+    width: 100%;
+    transform: translateY(-280px);
+    transition: all 1s ease;
+    div{
+        width: 90%;
+        margin: 0 auto;
+        background: #1D1E24;
+        color: white;
+        padding-block: 20px;
+        a{
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            &:hover{
+                color: #f25e39dc;
+            }
+        }
+    }
+    &.Open{
+        transform: translateY(0px);
+    }
+}
+//Footer
+footer{
+    width: 100%;
+    background: #1D1E24;
+    section{
+        width: 90%;
+        margin: 0 auto;
+        padding-block: 20px;
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 300px;
+            margin: 20px auto;
+            input{
+                border-radius: 15px;
+                padding: 5px 10px;
+                border: none;
+                width: 80%;
+                outline: none;
+                &:focus{
+                    outline: 1px solid #F25F39;
+                }
+            }
+            button{
+                background: #F25F39;
+                color: white;
+                padding: 5px 10px;
+                border: none;
+                border-radius: 15px;
+            }
+        }
+        article{
+            .FooterList > ul >li{
+                    text-align: center;
+                    font-size: 1.2rem;
+                    color: white;
+                    margin-bottom: 15px;
+                    letter-spacing: 1px;
+                    &:hover{
+                        color: #F25F39;
+                    }
+                }
+            .SocialContainer{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+                img{
+                    width: 60%;
+                    max-width: 200px;
+                }
+                div{
+                    width: 70%;
+                    display: flex;
+                    justify-content: space-between;
+                    max-width: 200px;
+                    svg{
+                        color: white;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            @media (min-width: 500px) {
+                .FooterList{
+                    display: flex;
+                    justify-content: space-around;
+                    max-width: 500px;
+                    margin: 0 auto;
+                    ul > li {
+                        text-align: inherit;
+                    }
+                }
+            }
+            @media (min-width: 700px) {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                .FooterList{
+                    grid-column: 2;
+                    width: 80%;
+                }
+                .SocialContainer{
+                    grid-column: 1;
+                    grid-row: 1;
+                }
+            }
+        }
+        @media (min-width: 1000px){
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            form{
+                grid-column: 2;
+                margin: 0px;
+                display: flex;
+                align-items: center;
+                grid-row: 1;
+            }
+            article{
+                grid-row: 1;
+            }
+        }
+    }
+}
