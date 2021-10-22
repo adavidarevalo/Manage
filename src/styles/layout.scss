@@ -1,8 +1,10 @@
 header{
     position: fixed;
     width: 100%;
-    background: white;
+    background: #FAFAFA;
+    z-index: 100;
     div{
+      max-width: 1730px;
         width: 90%;
         margin: 0 auto;
         display: flex;
@@ -18,11 +20,43 @@ header{
             cursor: pointer;
         }
         nav{
+            width: 50%;
+            justify-content: space-between;
+            text-transform: uppercase;
+            font-weight: 500;
             display: none;
+            max-width: 500px;
+            a{
+              font-size: .9rem;
+              &:hover{
+                border-bottom: 2px solid #f25f3a;
+              }
+            }
         }
         .ButtonElement{
             display: none;
+            background-color: #f25f3a;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            box-shadow: 1px 5px 10px 0px #ec9b9b;
+            text-align: center;
+            padding-bottom: 13px;
+            font-weight: 500;
         }
+    }
+    @media (min-width: 1000px) {
+      div{
+        align-items: center;
+        .MenuIcon {
+          display: none;
+        }
+        nav,
+        .ButtonElement {
+          display: flex;
+        }
+      }
     }
 }
 .MenuPhone{
@@ -32,6 +66,7 @@ header{
     transform: translateY(-280px);
     transition: all 1s ease;
     div{
+      max-width: 1730px;
         width: 90%;
         margin: 0 auto;
         background: #1D1E24;
