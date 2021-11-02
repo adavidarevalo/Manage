@@ -3,6 +3,7 @@ header{
     width: 100%;
     background: #FAFAFA;
     z-index: 100;
+    animation: fadeInDown 1s both;
     div{
       max-width: 1730px;
         width: 90%;
@@ -28,6 +29,7 @@ header{
             max-width: 500px;
             a{
               font-size: .9rem;
+              border-bottom: 2px solid white;
               &:hover{
                 border-bottom: 2px solid #f25f3a;
               }
@@ -190,3 +192,16 @@ footer{
         }
     }
 }
+
+@keyframes fadeInDown {
+    0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    }
+    100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    }
+    } 

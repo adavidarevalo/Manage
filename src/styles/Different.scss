@@ -1,6 +1,7 @@
 .DifferentContainer{
   width:80%;
   margin: 0 auto;
+  animation: fadeInUp 1s both;
   .DifferentMain {
     text-align: center;
     max-width: 500px;
@@ -62,5 +63,15 @@
   }
 }
 
-
-//background-color: hsl(12, 88%, 59%);
+@keyframes fadeInUp {
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+  } 

@@ -6,6 +6,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        animation: fadeInRight 1s both;
         img{
             width: 80%;
         }
@@ -13,7 +14,9 @@
     .Container{
         padding: 25px 10px;
         text-align: center;
-        margin: 0 auto;          max-width: 500px;
+        margin: 0 auto;          
+        max-width: 500px;
+        animation: fadeInLeft 1s both;
         h2, h3{
             font-size: 2rem;
             line-height: 40px;
@@ -55,3 +58,23 @@
       }
     }
 }
+@keyframes fadeInLeft {
+    0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+    opacity: 1;
+    transform: none;
+    }
+    } 
+@keyframes fadeInRight {
+    0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+    }
+        100% {
+        opacity: 1;
+        transform: none;
+        }
+        } 
